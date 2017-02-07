@@ -17,7 +17,7 @@ CREATE TABLE tf_cookies (
   host VARCHAR(255) default NULL,
   data VARCHAR(255) default NULL,
   PRIMARY KEY  (cid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_links
@@ -28,7 +28,7 @@ CREATE TABLE tf_links (
   sitename VARCHAR(255) NOT NULL default 'Old Link',
   sort_order TINYINT(3) UNSIGNED default '0',
   PRIMARY KEY  (lid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO tf_links VALUES (NULL,'http://tf-b4rt.berlios.de/','tf-b4rt','0');
 
@@ -45,7 +45,7 @@ CREATE TABLE tf_log (
   user_agent VARCHAR(200) NOT NULL default '',
   time VARCHAR(14) NOT NULL default '0',
   PRIMARY KEY  (cid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_messages
@@ -60,7 +60,7 @@ CREATE TABLE tf_messages (
   time VARCHAR(14) NOT NULL default '0',
   force_read TINYINT(1) default '0',
   PRIMARY KEY  (mid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_rss
@@ -69,7 +69,7 @@ CREATE TABLE tf_rss (
   rid int(10) NOT NULL auto_increment,
   url VARCHAR(255) NOT NULL default '',
   PRIMARY KEY  (rid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_users
@@ -87,7 +87,7 @@ CREATE TABLE tf_users (
   language_file VARCHAR(60) default 'lang-english.php',
   state TINYINT(1) NOT NULL default '1',
   PRIMARY KEY  (uid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_transfers
@@ -111,7 +111,7 @@ CREATE TABLE tf_transfers (
   maxcons SMALLINT(4) unsigned NOT NULL default '0',
   rerequest MEDIUMINT(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (transfer)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_transfer_totals
@@ -121,7 +121,7 @@ CREATE TABLE tf_transfer_totals (
   uptotal BIGINT(80) NOT NULL default '0',
   downtotal BIGINT(80) NOT NULL default '0',
   PRIMARY KEY  (tid)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_trprofiles
@@ -142,7 +142,7 @@ CREATE TABLE tf_trprofiles (
   maxcons SMALLINT(4) unsigned NOT NULL default '0',
   rerequest MEDIUMINT(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (id)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_xfer
@@ -153,7 +153,7 @@ CREATE TABLE tf_xfer (
   download BIGINT(80) NOT NULL default '0',
   upload BIGINT(80) NOT NULL default '0',
   PRIMARY KEY  (user_id,date)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_settings_user
@@ -162,7 +162,7 @@ CREATE TABLE tf_settings_user (
   uid INT(10) NOT NULL,
   tf_key VARCHAR(255) NOT NULL default '',
   tf_value TEXT NOT NULL
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 --
 -- tf_settings
@@ -171,7 +171,7 @@ CREATE TABLE tf_settings (
   tf_key VARCHAR(255) NOT NULL default '',
   tf_value TEXT NOT NULL,
   PRIMARY KEY  (tf_key)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO tf_settings VALUES ('path','/usr/local/torrentflux/');
 INSERT INTO tf_settings VALUES ('max_upload_rate','10');
@@ -332,7 +332,7 @@ CREATE TABLE tf_settings_dir (
   tf_key VARCHAR(255) NOT NULL default '',
   tf_value TEXT NOT NULL,
   PRIMARY KEY  (tf_key)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO tf_settings_dir VALUES ('dir_public_read','1');
 INSERT INTO tf_settings_dir VALUES ('dir_public_write','0');
@@ -359,7 +359,7 @@ CREATE TABLE tf_settings_stats (
   tf_key VARCHAR(255) NOT NULL default '',
   tf_value TEXT NOT NULL,
   PRIMARY KEY  (tf_key)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO tf_settings_stats VALUES ('stats_enable_public','0');
 INSERT INTO tf_settings_stats VALUES ('stats_show_usage','1');
