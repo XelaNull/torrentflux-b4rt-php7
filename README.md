@@ -15,8 +15,8 @@ it stopped working. So what you see here is a version that works again in PHP 7.
 * Updated adodb
 * Added mysqli as supported db
 * Fixes for functions that were removed in PHP 7
-* Fixes for Read RSS query
-* Fixes MySQL database
+* Fixed for Read RSS query
+* Fixed MySQL database
 
 ## Warning
 Everything i changed was in the html folder which is actually what i had on my server.

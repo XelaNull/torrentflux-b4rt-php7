@@ -370,4 +370,3 @@ INSERT INTO tf_settings_stats VALUES ('stats_default_type','all');
 INSERT INTO tf_settings_stats VALUES ('stats_default_format','xml');
 INSERT INTO tf_settings_stats VALUES ('stats_default_attach','0');
 INSERT INTO tf_settings_stats VALUES ('stats_default_compress','0');
-
