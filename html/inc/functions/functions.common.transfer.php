@@ -247,8 +247,58 @@ function getTransferSavepath($transfer) {
 			$savepath = ($cfg["enable_home_dirs"] != 0)
 				? $cfg["path"].getOwner($transfer).'/'
 				: $cfg["path"].$cfg["path_incoming"].'/';
-		$transfers['settings'][$transfer]['savepath'] = $savepath;
-		return $savepath;
+				
+		/*Origin*/
+		//$transfers['settings'][$transfer]['savepath'] = $savepath;
+		//return $savepath;
+		
+		/*Mod*/
+		$dir = save_to_folder($transfer);
+		if($dir){
+			$dirs = $dir;
+		} else {
+			$dirs = 'Orhers';
+		}
+		$transfers['settings'][$transfer]['savepath'] = $savepath.$dirs;
+		return $savepath.$dirs;
+	}
+}
+
+/**
+ * Save to Folder
+ */
+function save_to_folder($transfer){
+	$path = array(
+		'xxx' => 'xXx',
+		'Tvs' => 'Sorozatok',	//TVStore special
+		'ebook' => 'eBook',	//nCore Special
+		'xvidser' => 'Sorozatok',	//nCore Special
+		'xvid' => 'Filmek',	//nCore Special
+		'game' => 'Game',	//nCore Special
+		'iso' => 'Utils',	//nCore Special
+		'misc' => 'Utils',	//nCore Special
+		'mp3' => 'Zene',	//nCore Special
+		'flac' => 'Zene',	//nCore Special
+		'va-' => 'Zene',
+		'HDTV' => 'Sorozatok',
+		'IPTV' => 'Sorozatok',	//BitHUmen Special
+		'WEB-DLRip' => 'Sorozatok',	//Other torrent error (Filmek or Sorozatok)
+		'BDRip' => 'Filmek',	//Other torrent error (Filmek or Sorozatok)
+		'_hd_' => 'Filmek',	//nCore Special
+		'HD' => 'Filmek',
+		'_dvd9_' => 'Filmek',	//nCore Special
+		'DVDRiP' => 'Filmek',
+		'DVD' => 'Filmek'
+	);
+
+	foreach($path as $a => $b){
+		$pos = stripos($transfer, $a);
+		if ($pos !== false) {
+		return $b;
+		}
+	}
+}
+		
 	}
 }
 
