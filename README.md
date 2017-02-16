@@ -21,7 +21,7 @@ it stopped working. So what you see here is a version that works again in PHP 7.
 ## Warning
 Everything i changed was in the html folder which is actually what i had on my server.
 
-I did *NOT* do any resetup with this package! Most likely it works but i really did not try.
+I did *NOT* do any resetup with this package!
 
 If you only want to upgrade your existing installation just copy the contents of the html
 folder except your db config in /html/inc/config/config.db.php
