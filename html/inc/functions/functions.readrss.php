@@ -89,7 +89,6 @@ function GetRSSLinks() {
         //var_dump($row); //Test//
 		}
 	return $return;
-	}
 }
 
 ?>

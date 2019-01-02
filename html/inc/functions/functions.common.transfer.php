@@ -299,9 +299,6 @@ function save_to_folder($transfer){
 	}
 }
 		
-	}
-}
-
 /**
  * set file prio
  *
