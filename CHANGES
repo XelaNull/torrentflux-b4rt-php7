@@ -1,7 +1,53 @@
 ================================================================================
-$Id: CHANGES 3366 2008-03-22 16:26:45Z b4rt $
+torrentflux-b4rt v1.0 beta4: 2019-01-04 06:43:23
 ================================================================================
 
+torrentflux-b4rt v1.0 beta4
+- base on torrentflux-b4rt-php7 (torrentflux-b4rt v1.0 beta3)
+  * based on TorrentFlux-NG v1.0git
+    * based on torrentflux-b4rt 1.0 beta2
+
+***** todo *****
+finish Transmission RPC implementation (Transmission-daemon)
+finish Vuze RPC implementation (need new features in xmwebui)
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+torrentflux-b4rt 1.0 beta4
+
+***** changes *****
+
+- Corrected Parse error in html/inc/functions/functions.common.transfer.php
+
+- Corrected Parse error in html/inc/functions/functions.readrss.php
+
+- Removed save_to_folder mod in html/inc/functions/functions.common.transfer.php
+
+
+torrentflux-b4rt 1.0 beta3
+
+***** changes *****
+
+- Forked existing torrentflux-b4rt code from: https://github.com/scaniatm/torrentflux-b4rt-php7
+
+- Moved all completed changes to changelog
+
+- Db related : Email addresses in tf_users (based on studioeng work)
+
+- Db related : UserId in tf_transfer_totals
+
+- RedRound is now default theme
+
+- Vuze RPC implementation
+
+- Transmission RPC implementation (based on deadeyes work)
+
+- jQuery and jGrowl in core
+
+***** updates *****
+
+- Transmission-cli 2.12 patch and binary (x86)
 
 torrentflux-b4rt 1.0 beta2
 http://svn.berlios.de/wsvn/tf-b4rt/trunk/?op=log&rev=3366
