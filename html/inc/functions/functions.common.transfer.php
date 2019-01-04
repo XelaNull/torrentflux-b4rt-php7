@@ -253,6 +253,9 @@ function getTransferSavepath($transfer) {
 		return $savepath;
 		
 		/*Mod*/
+		// Disabled this mod in favor of original due to these folder names below
+		// being hard-coded and in a non-English language. For a remote seedbox, it
+		// would be more ideal to drop into specific known folder.
 		/*
 		$dir = save_to_folder($transfer);
 		if($dir){
