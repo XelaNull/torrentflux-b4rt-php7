@@ -249,10 +249,11 @@ function getTransferSavepath($transfer) {
 				: $cfg["path"].$cfg["path_incoming"].'/';
 				
 		/*Origin*/
-		//$transfers['settings'][$transfer]['savepath'] = $savepath;
-		//return $savepath;
+		$transfers['settings'][$transfer]['savepath'] = $savepath;
+		return $savepath;
 		
 		/*Mod*/
+		/*
 		$dir = save_to_folder($transfer);
 		if($dir){
 			$dirs = $dir;
@@ -261,6 +262,8 @@ function getTransferSavepath($transfer) {
 		}
 		$transfers['settings'][$transfer]['savepath'] = $savepath.$dirs;
 		return $savepath.$dirs;
+		*/
+		
 	}
 }
 
